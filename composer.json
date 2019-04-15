@@ -1,0 +1,12 @@
+{
+  "name": "sle/IT328/dating",
+  "authors": [
+    {
+      "name": "Sang Le",
+      "email": "sle11@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
