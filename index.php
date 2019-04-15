@@ -4,7 +4,9 @@ error_reporting(E_ALL);
 
 require_once "vendor/autoload.php";
 
-$f3 = Base::instance();
+$f3 = Base::instance()
+
+$f3->set('DEBUG', 3);
 
 $f3->route('GET /', function() {
     // Display a view
