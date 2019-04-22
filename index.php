@@ -82,11 +82,7 @@ $f3->route('POST /summary', function() {
         $interests = "No interests";
     }
 
-
-
     $_SESSION['interests'] = $interests;
-
-//    $_SESSION['interests'] = substr($interests,0, -1);
 
     // Display a view
     $view = new Template();
