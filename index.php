@@ -36,9 +36,9 @@ $f3->route('GET /personal-info', function() {
 
 // Define the profile form route
 $f3->route('POST /profile', function() {
-    // Get profile information store in session
-    $_SESSION['first-name'] = $_POST['first'];
-    $_SESSION['last-name'] = $_POST['last'];
+    // Get personal information from previous form
+    $_SESSION['first'] = $_POST['first-name'];
+    $_SESSION['last'] = $_POST['last-name'];
     $_SESSION['age'] = $_POST['age'];
     $_SESSION['gender'] = $_POST['gender'];
     $_SESSION['phone'] = $_POST['phone'];
@@ -50,15 +50,33 @@ $f3->route('POST /profile', function() {
 
 // Define the interests form route
 $f3->route('POST /interests', function() {
-
+    // Get profile information from previous form
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['state'] = strtoupper($_POST['state']);
+    $_SESSION['seeking'] = $_POST['seeking'];
+    $_SESSION['bio'] = $_POST['bio'];
 
     // Display a view
     $view = new Template();
     echo $view->render('views/interests-form.html');
 });
 
-// Define the interests form route
+// Define the profile summary route
 $f3->route('POST /summary', function() {
+
+//    $_SESSION['inDoor'] = $_POST['inDoor'];
+//    $_SESSION['outDoor'] = $_POST['outDoor'];
+
+    $interests = "";
+    foreach($_POST['inDoor'] as $interest) {
+        $interests .= $interest . " ";
+    }
+    foreach($_POST['outDoor'] as $interest) {
+        $interests .= $interest . " ";
+    }
+
+    $_SESSION['interests'] = $interests;
+
     // Display a view
     $view = new Template();
     echo $view->render('views/summary.html');
