@@ -9,6 +9,8 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+session_start();
+
 // Require autoload
 require_once "vendor/autoload.php";
 
@@ -34,6 +36,13 @@ $f3->route('GET /personal-info', function() {
 
 // Define the profile form route
 $f3->route('POST /profile', function() {
+    // Get profile information store in session
+    $_SESSION['first-name'] = $_POST['first'];
+    $_SESSION['last-name'] = $_POST['last'];
+    $_SESSION['age'] = $_POST['age'];
+    $_SESSION['gender'] = $_POST['gender'];
+    $_SESSION['phone'] = $_POST['phone'];
+
     // Display a view
     $view = new Template();
     echo $view->render('views/profile-form.html');
@@ -41,6 +50,8 @@ $f3->route('POST /profile', function() {
 
 // Define the interests form route
 $f3->route('POST /interests', function() {
+
+
     // Display a view
     $view = new Template();
     echo $view->render('views/interests-form.html');
