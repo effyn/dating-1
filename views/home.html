@@ -1,3 +1,11 @@
+<!--
+author: Sang Le
+date: 04/21/19
+description: home page for dating website
+filename: home.html
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +14,23 @@
 
     <title>Dating Site</title>
 
+    <!-- Person CSS-->
     <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Bootstrap CSS and script -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <!-- Nav bar for page -->
     <nav class="navbar navbar-light bg-light">Dating Site</nav>
+
+    <!-- Main container -->
     <div class="container shadow-sm p-3 mb-5 bg-white rounded">
         <div class="row">
+            <!-- right column of container -->
             <div class="col-lg-6">
                 <h1>Dating for Dummies</h1>
                 <p>
@@ -28,8 +43,8 @@
 
                 <h2 class="people-opinion">What people think about us.</h2>
 
+                <!-- testimonial container -->
                 <hr class="px-5">
-
                 <p class="font-italic">
                     "Sed pellentesque viverra ultrices. Sed efficitur rutrum interdum. Donec sit amet interdum ex. -Sam"
                 </p>
@@ -39,23 +54,19 @@
                 <p class="font-italic">
                     "Nam tincidunt magna ante, quis lacinia ligula vestibulum et. -Sonny"
                 </p>
-
-                <hr class="px-5">
-
+                <hr class="px-5">  <!-- end of testimonial container -->
 
                 <div id="create-profile">
                     <button class="btn btn-primary">Create a profile!</button>
                 </div>
+            </div>  <!-- end of right column-->
 
-            </div>
+            <!-- left column of container -->
             <div class="col-lg-6">
                 <img src="images/couple.jpg" class="img-fluid rounded" alt="Responsive image">
-            </div>
-
-        </div>
-    </div>
-
-
+            </div>  <!-- end of left column -->
+        </div>  <!-- end of row -->
+    </div>  <!-- end of main container -->
 </body>
 
 </html>
