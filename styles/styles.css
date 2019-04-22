@@ -5,3 +5,16 @@
 .people-opinion {
     font-weight: 600;
 }
+
+#note {
+    background: #f1f1f1;
+}
+
+#policy {
+    color: blue;
+}
+
+#contact-button {
+    margin: auto;
+    padding-top: 2rem;
+}
