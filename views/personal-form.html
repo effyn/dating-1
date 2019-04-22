@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Information</title>
+
+    <!-- Person CSS-->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Bootstrap CSS and script -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Nav bar for page -->
+    <nav class="navbar navbar-light bg-light">Dating Site</nav>
+
+    <!-- Main container -->
+    <div class="container shadow-sm p-3 mb-5 bg-white rounded">
+        <h1>Personal Information</h1>
+        <hr>
+
+        <!-- Form container-->
+        <form action="profile" method="post">
+            <div class="row">
+                <!-- Right column of container -->
+                <div class="col-lg-8">
+                    <!-- First name input -->
+                    <label class="w-100">
+                        <strong>First Name</strong>
+                        <br>
+                        <input type="text" name="first-name" class="w-100 form-control">
+                    </label>  <!-- end of first name input -->
+
+                    <!-- Last name input -->
+                    <label class="w-100">
+                        <strong>Last Name</strong>
+                        <br>
+                        <input type="text" name="last-name" class="w-100 form-control">
+                    </label>  <!-- end of last name input-->
+                    <br>
+
+                    <!-- Age input -->
+                    <label class="w-100">
+                        <strong>Age</strong>
+                        <br>
+                        <input type="number" name="age" class="w-100 form-control">
+                    </label>  <!-- end of age input-->
+                    <br>
+
+                    <!-- Gender radio button -->
+                    <label class="w-100">
+                        <strong>Gender</strong>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender"> Male
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender"> Female
+                        </label>
+                    </label>  <!-- End of gender buttons-->
+                    <br>
+
+                    <!-- Phone number input -->
+                    <label class="w-100">
+                        <strong>Phone Number</strong>
+                        <br>
+                        <input type="text" name="phone" class="w-100 form-control">
+                    </label>  <!-- end of phone number input -->
+                </div>  <!-- end of right column of container -->
+
+
+
+
+            </div>
+
+
+        </form>
+
+    </div>  <!-- end of main container-->
+</body>
+</html>
