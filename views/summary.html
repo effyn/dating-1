@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Summary</title>
+
+    <!-- Personal CSS-->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Bootstrap CSS and script -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Nav bar for page -->
+    <nav class="navbar navbar-light bg-light">Dating Site</nav>
+
+    <!-- Main container  -->
+    <div class="container shadow-sm p-5 mb-5 mt-2 bg-white rounded">
+        <div class="row">
+            <!-- Left column of container -->
+            <div class="col-lg-6 border rounded p-3">
+                <p>Name: {{@SESSION.first}} {{@SESSION.last}}</p>
+                <hr class="w-100">
+                <p>Gender: {{@SESSION.gender}}</p>
+                <hr>
+                <p>Age: {{@SESSION.age}}</p>
+                <hr>
+                <p>Phone: {{@SESSION.phone}}</p>
+                <hr>
+                <p>Email: {{@SESSION.email}}</p>
+                <hr>
+                <p>State: {{@SESSION.state}}</p>
+                <hr>
+                <p>Seeking: {{@SESSION.seeking}}</p>
+                <hr>
+                <p>Interests: {{@SESSION.interests}}</p>
+            </div>  <!-- end of left column-->
+
+            <!-- Right column of container -->
+            <div class="col-lg-6">
+                <img src="images/blank-profile.jpg" class="img-fluid rounded" alt="Responsive image">
+                <h6>Biography</h6>
+                <p>{{@SESSION.bio}}</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
