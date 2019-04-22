@@ -32,6 +32,12 @@ $f3->route('GET /personal-info', function() {
     echo $view->render('views/personal-form.html');
 });
 
+// Define the profile form route
+$f3->route('POST /profile', function() {
+    // Display a view
+    $view = new Template();
+    echo $view->render('views/profile-form.html');
+});
 
 
 $f3->run();
