@@ -46,5 +46,13 @@ $f3->route('POST /interests', function() {
     echo $view->render('views/interests-form.html');
 });
 
+// Define the interests form route
+$f3->route('POST /summary', function() {
+    // Display a view
+    $view = new Template();
+    echo $view->render('views/summary.html');
+});
+
+
 
 $f3->run();
