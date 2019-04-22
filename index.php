@@ -64,18 +64,29 @@ $f3->route('POST /interests', function() {
 // Define the profile summary route
 $f3->route('POST /summary', function() {
 
-//    $_SESSION['inDoor'] = $_POST['inDoor'];
-//    $_SESSION['outDoor'] = $_POST['outDoor'];
+    $_SESSION['inDoor'] = $_POST['inDoor'];
+    $_SESSION['outDoor'] = $_POST['outDoor'];
 
     $interests = "";
-    foreach($_POST['inDoor'] as $interest) {
-        $interests .= $interest . " ";
+    if(count($_SESSION['inDoor']) != 0) {
+        foreach($_SESSION['inDoor'] as $interest) {
+            $interests .= $interest . " ";
+        }
     }
-    foreach($_POST['outDoor'] as $interest) {
-        $interests .= $interest . " ";
+    if(count($_SESSION['outDoor']) != 0) {
+        foreach($_SESSION['outDoor'] as $interest) {
+            $interests .= $interest . " ";
+        }
+    }
+    if(count($_SESSION['inDoor']) == 0 && count($_SESSION['outDoor']) == 0) {
+        $interests = "No interests";
     }
 
+
+
     $_SESSION['interests'] = $interests;
+
+//    $_SESSION['interests'] = substr($interests,0, -1);
 
     // Display a view
     $view = new Template();
